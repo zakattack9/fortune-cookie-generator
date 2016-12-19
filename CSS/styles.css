@@ -1,0 +1,15 @@
+#fortune-cache{
+  display: none;
+}
+
+#fortune-cookie-text{
+  background-color: green;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#previous-fortunes{
+  background-color: red;
+  margin-left: auto;
+  margin-right: auto;
+}
