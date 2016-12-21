@@ -1,5 +1,47 @@
+body{
+  background-color: beige;
+}
+
+#first{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 16px 31px;
+  height: 20px;
+
+  background-color: #ed7076;
+  border-radius: 20px;
+  border: #e3ed51 3px solid;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1px;
+}
+
+#first:hover {
+  background-color:#e0989c;
+}
+
 #second{
   display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 16px 31px;
+  height: 20px;
+
+  background-color: #8370eb;
+  border-radius: 20px;
+  border: #52d9eb 3px solid;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1px;
+}
+
+#second:hover {
+  background-color:#919fe6;
 }
 
 #fortune-cache{
@@ -7,13 +49,37 @@
 }
 
 #fortune-cookie-text{
-  background-color: green;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 100px;
+  padding: 10px 10px;
+  text-align: center;
+  background-color: mediumspringgreen;
+  border: lightgreen 10px inset;
+  font-family: "Courier New";
 }
 
-#previous-fortunes{
-  background-color: red;
+#fortune-cookie-text h3{
+  color: seagreen;
+  font-family: "Georgia";
+}
+
+#other-fortunes-div{
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 100px;
+  padding: 10px 10px;
+  background-color: skyblue;
+  border: powderblue 10px outset;
+  font-family: "Courier New";
+}
+
+#other-fortunes-div h3{
+  text-align: center;
+  color: steelblue;
+  font-family: "Georgia";
 }
