@@ -1,7 +1,7 @@
 console.log("JS is Linked Properly"); //this should always show in console
 
 var fortunesList = ["die 2mrrw", "find a dollar", "become poor", "jump off a cliff", "turn into Batman"];
-//if any fortunes are added to the list above, make sure to change "for loop" paramter one value (var i = " ";)
+//if any fortunes are added to the list above, make sure to change "for loop" paramter one value (var i = " ";) and pie chart at bottom
 function generateFortuneCookie(){ //runs for the first time button is pressed
   var fortunesList = ["die 2mrrw", "find a dollar", "become poor", "jump off a cliff", "turn into Batman"];
   
@@ -52,7 +52,7 @@ function anotherFortune(){ //this should run only after the first fortune is pro
   var dynamicDiv = document.getElementById("other-fortunes-div");
   var height = dynamicDiv.clientHeight;
   heightCount++
-  console.log(heightCount);
+  //console.log(heightCount);
   if(heightCount >= 2){
     dynamicDiv.style.height = height + 1 + "px";
   }
@@ -63,6 +63,32 @@ function anotherFortune(){ //this should run only after the first fortune is pro
   cookieText.appendChild(nodetwo);
 }
 
+var fortuneOneTotal = 0;
+var fortuneTwoTotal = 0;
+var fortuneThreeTotal = 0;
+var fortuneFourTotal = 0;
+var fortuneFiveTotal = 0;
+function pieChart(){
+  //http://www.jscharts.com/how-to-use-pie-charts
+  //pie chart of fortunes
+  var data = document.getElementById("previous-fortunes");
+  var dataLast = data.lastChild.innerText;
+  if(dataLast == "You will die 2mrrw."){  
+    fortuneOneTotal++
+  }
+  if(dataLast == "You will find a dollar."){
+    fortuneTwoTotal++
+  }
+  if(dataLast == "You will become poor."){
+    fortuneThreeTotal++  
+  }
+  if(dataLast == "You will jump off a cliff."){
+    fortuneFourTotal++
+  }
+  if(dataLast == "You will turn into Batman."){
+    fortuneFiveTotal++
+  }
+}
 /*
 ---------------------------
 Features:
