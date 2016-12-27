@@ -3,12 +3,12 @@ console.log("JS is Linked Properly"); //this should always show in console
 var fortunesList = ["die 2mrrw", "find a dollar", "become poor", "jump off a cliff", "turn into Batman"];
 //if any fortunes are added to the list above, make sure to change "for loop" paramter one value (var i = " ";) and pie chart at bottom
 function generateFortuneCookie(){ //runs for the first time button is pressed
-  var fortunesList = ["die 2mrrw", "find a dollar", "become poor", "jump off a cliff", "turn into Batman"];
+  var clonesList = fortunesList.slice();
   
   //randomizer for fortunes
   var randomFortune = " ";
   for (var i = 4; i >= 0; i--){
-    randomFortune = fortunesList.splice(Math.floor(Math.random() * (i + 1)), 1); //(i + 1) ensures 5 values are returned since the last value in math.random is excluded
+    randomFortune = clonesList.splice(Math.floor(Math.random() * (i + 1)), 1); //(i + 1) ensures 5 values are returned since the last value in math.random is excluded
     console.log("You will " + randomFortune + ".");
     //temporarily stores random list
     var tempCache = document.getElementById("fortune-cache");
@@ -41,11 +41,12 @@ function anotherFortune(){ //this should run only after the first fortune is pro
 
   //button counter
   count++
-  console.log(count);
+  //console.log(count);
   if(count == max){ //once it runs out of fortunes, it will regenerate a new list
     generateFortuneCookie();
-    count = 0; //resets count back to zero
-    var nodetwo = tempCache.lastChild; //this needs to be to prevent errors, will cause error on console
+    count = 0; //resets count back to zero 
+    pieChart(); //will prevent error from screwing up count for pie chart
+    var nodetwo = tempCache.lastChild; //this needs to be here to prevent errors, will cause error on console
   }
   
   //this increases div height as list increases
@@ -75,6 +76,7 @@ function pieChart(){
   var dataLast = data.lastChild.innerText;
   if(dataLast == "You will die 2mrrw."){  
     fortuneOneTotal++
+    console.log(fortuneOneTotal);
   }
   if(dataLast == "You will find a dollar."){
     fortuneTwoTotal++
@@ -87,8 +89,31 @@ function pieChart(){
   }
   if(dataLast == "You will turn into Batman."){
     fortuneFiveTotal++
-  }
+  } 
 }
+
+  //Pie Chart
+  //http://stackoverflow.com/questions/6995797/html5-canvas-pie-chart
+  var canvas = document.getElementById("pie");
+  var context = canvas.getContext("2d");
+  var lastend = 0;
+  var data = [200, 60, 15];
+  var total = 0;
+  var color = ['aquamarine', 'palegreen', 'paleturquoise'];
+
+  for(var z = 0; z < data.length; z++){
+    total += data[z];
+  }
+
+  for(var y = 0; y < data.length; y++){
+    context.fillStyle = color[y];
+    context.beginPath();
+    context.moveTo(canvas.width/2,canvas.height/2);
+    context.arc(canvas.width/2,canvas.height/2,canvas.height/2,lastend,lastend+(Math.PI*2*(data[y]/total)),false);
+    context.lineTo(canvas.width/2,canvas.height/2);
+    context.fill();
+    lastend += Math.PI*2*(data[y]/total);
+  }
 /*
 ---------------------------
 Features:
