@@ -34,3 +34,8 @@ This assignment allows for a large number of possible stretch goals. You are enc
 
 ##Resources
 http://www.w3schools.com/jsref/jsref_random.asp
+
+## Changes
+script line in html moved to bottom
+previous code works make sure script is at TOP
+fortuneTotal will console.log but <script> must be at top of HTML
