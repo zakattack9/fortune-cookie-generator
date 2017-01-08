@@ -7,7 +7,7 @@
 </head>
 <body>
   <button onclick="generateFortuneCookie()" id="first">Make My Fortune!</button>
-  <button onclick="anotherFortune(); pieChart();" id="second">Generate Another Fortune!</button>
+  <button onclick="anotherFortune(); stats(); pieChart();" id="second">Generate Another Fortune!</button>
   <div id="fortune-cache">
   </div>
   <div id="fortune-cookie-text">
@@ -18,7 +18,20 @@
       <ul id="previous-fortunes">
       </ul>
   </div>
-  <canvas id="pie" width="400" height="400"></canvas>
+  <canvas id="pie" height="200" width="200"></canvas>
+  <div id="statistics">
+    <h3>Fortune Statistics</h3>
+    <div id="one"> 
+    </div>
+    <div id="two">
+    </div>
+    <div id="three">
+    </div>
+    <div id="four">   
+    </div>
+    <div id="five">
+    </div>
+  </div>
 </body>
 <script type="text/javascript" src="./JS/app.js"></script>
 </html>
