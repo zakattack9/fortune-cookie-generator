@@ -52,13 +52,14 @@ body{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  width: 300px;
+  width: 320px;
   height: 100px;
   padding: 10px 10px;
   text-align: center;
   background-color: mediumspringgreen;
   border: lightgreen 10px inset;
   font-family: "Courier New";
+  font-weight: bold;
 }
 
 #fortune-cookie-text h3{
@@ -69,17 +70,43 @@ body{
 #other-fortunes-div{
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
-  width: 300px;
-  height: 100px;
+  max-height: 250px; 
+  width: 320px;
   padding: 10px 10px;
   background-color: skyblue;
   border: powderblue 10px outset;
   font-family: "Courier New";
+  overflow-y: auto; /* adds a scroll bar when div reaches max-height (250px) */
 }
 
 #other-fortunes-div h3{
   text-align: center;
   color: steelblue;
   font-family: "Georgia";
+}
+
+#statistics{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 600px;
+  padding: 10px 10px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: coral;
+  border: chocolate 10px ridge;
+  font-family: "Courier New";
+}
+
+#statistics h3{
+  color: peachpuff;
+  font-family: "Georgia";
+}
+
+#pie{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: block;
 }
