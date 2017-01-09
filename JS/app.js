@@ -160,7 +160,7 @@ function stats(){
   }
 }
 
-//Pie Chart
+//Pie Chart (not my code)
 //http://stackoverflow.com/questions/6995797/html5-canvas-pie-chart
 function pieChart(){
   var canvas = document.getElementById("pie");
@@ -216,18 +216,15 @@ function pieChart(){
 Features:
 
 "cache div" that temporarily holds the list data until used up
-text transfers between the two divs
-dynamic div that streatches as list grows
 generates a new fortune list, does not reuse fortunes until list is depleted
 counters that keep track of when certain elements need to run again
 ---------------------------
-Future Development:
+Stuff to be Added:
 
 add a scrollbar once the "Previous Fortunes" list gets to long
 add a way to generate for multiple people
 add other statisics (ex. percentage of same fortunes recieved)
 make the page appear with a wave of the mouse over a "Crystal Ball"
-sound effects???
 ---------------------------
 Side Notes:
 
@@ -239,14 +236,13 @@ for (var fortunesList = ["die 2mrrw", "find a dollar", "become poor", "jump off 
     var random = fortunesList.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
     console.log(random);
 } 
-simplified version, not used due to lack of knowledge of how it works (go to "goo.gl/qwwbu7" for reference)
+(go to "goo.gl/qwwbu7" for reference)
 ---------------------------
 Problems With Current Code:
 
-fortunesList must be set as both a global and local variable
+fortunesList must be set as both a global and local variable (used .slice() to return all values)
 other variable like "tempCache" cannot be set as a global varible for some reason
 multiple variables that are the same but within different functions however cannot be set to global ^ 
-refer to line 48 (count, var nodetwo)
-height of div doesn't increase all the time stops after 5 clicks then continues again
+height of div doesn't increase all the time stops after 5 clicks then continues again (ignore, fixed line 59)
 ---------------------------
 */
