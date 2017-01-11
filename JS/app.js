@@ -30,12 +30,6 @@ function generateFortuneCookie(){ //runs for the first time button is pressed
 var count = 0;
 var max = fortunesList.length;
 //variables above pertain to the "count" function that reruns the "generateFortuneCookie()" function
-/*
-var heightCount = 0;
-must be seperate and increase OUTSIDE of function, determines div height (dynamicDiv)
-^^^^^^^^
-This was put here to make div size increase as the fortune list gets longer
-*/
 function anotherFortune(){ //this should run only after the first fortune is produce
   var cookieText = document.getElementById("fortune-cookie-text"); //this variable MUST go before nodethree otherwise if declared after, nodethree won't recognize variable
   //appends text from "fortune-cookie-text" to "previous-fortunes", this must be run first before adding new text from tempCache
@@ -64,9 +58,9 @@ function anotherFortune(){ //this should run only after the first fortune is pro
   //console.log(count);
   if(count == max){ //once it runs out of fortunes, it will regenerate a new list
     generateFortuneCookie();
-    count = 0; //resets count back to zero
     stats();
     pieChart();
+    count = 0; //resets count back to zero
     var nodetwo = tempCache.lastChild; //this needs to be here to prevent errors, will cause error on console
   }
 
