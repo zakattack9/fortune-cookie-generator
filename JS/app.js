@@ -25,6 +25,9 @@ function generateFortuneCookie(){ //runs for the first time button is pressed
   var cookieText = document.getElementById("fortune-cookie-text");
   var nodetwo = tempCache.lastChild;
   cookieText.appendChild(nodetwo);
+
+  //fortunes total
+  document.getElementById("total").innerText = "Total Fortunes Generated: 1";
 }
 
 var count = 0;
@@ -77,6 +80,7 @@ var fortuneFourTotal = 0;
 var fortuneFiveTotal = 0;
 function stats(){
   var totalFortunes = document.getElementById("other-fortunes-div").getElementsByTagName("LI").length; //can console.log to check it counts all previously generated fortunes
+  document.getElementById("total").innerText = "Total Fortunes Generated: " + (totalFortunes + 1);
   var data = document.getElementById("previous-fortunes");
   var dataLast = data.lastChild.innerText;
   if(dataLast.includes("2mrrw")){  
@@ -176,7 +180,7 @@ function pieChart(){
     context.lineTo(canvas.width/2,canvas.height/2);
     context.stroke();
     context.strokeStyle = "white";
-    context.lineWidth = 3;
+    context.lineWidth = 5;
     context.fill();
     lastend += Math.PI*2*(data[y]/total);
   }

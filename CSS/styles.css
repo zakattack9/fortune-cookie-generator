@@ -104,6 +104,11 @@ body{
   font-family: "Georgia";
 }
 
+#total {
+  font-weight: bold;
+  font-style: italic;
+}
+
 #pie{
   margin-left: auto;
   margin-right: auto;
