@@ -1,13 +1,13 @@
 console.log("JS is Linked Properly"); //this should always show in console
 
-var fortunesList = ["die 2mrrw", "find a dollar", "become poor", "jump off a cliff", "turn into Batman"];
+var fortunesList = ["die 2mrrw", "find a dollar", "become poor", "jump off a cliff", "turn into Batman", "become rich", "lose your head", "drive into a tree", "EXPLODE", "turn around", "try to be cool", "fail at life", "be sorta happy", "cry for hours"];
 //if any fortunes are added to the list above, make sure to change "for loop" paramter one value (var i = " ";) and stats function at bottom
 function generateFortuneCookie(){ //runs for the first time button is pressed
   var cloneList = fortunesList.slice(); //this will console all values within the array, allowing fortunesList to stay as a global variable
 
   //randomizer for fortunes
   var randomFortune = " ";
-  for (var i = 4; i >= 0; i--){       
+  for (var i = 13; i >= 0; i--){       
     randomFortune = cloneList.splice(Math.floor(Math.random() * (i + 1)), 1); //(i + 1) ensures 5 values are returned since the last value in math.random is excluded
     console.log("You will " + randomFortune + ".");
     //temporarily stores random list
@@ -78,6 +78,15 @@ var fortuneTwoTotal = 0;
 var fortuneThreeTotal = 0;
 var fortuneFourTotal = 0;
 var fortuneFiveTotal = 0;
+var fortuneSixTotal = 0;
+var fortuneSevenTotal = 0;
+var fortuneEightTotal = 0;
+var fortuneNineTotal = 0;
+var fortuneTenTotal = 0;
+var fortuneElevenTotal = 0;
+var fortuneTwelveTotal = 0;
+var fortuneThirteenTotal = 0;
+var fortuneFourteenTotal = 0;
 function stats(){
   var totalFortunes = document.getElementById("other-fortunes-div").getElementsByTagName("LI").length; //can console.log to check it counts all previously generated fortunes
   document.getElementById("total").innerText = "Total Fortunes Generated: " + (totalFortunes + 1);
@@ -97,6 +106,33 @@ function stats(){
   }
   if(dataLast.includes("Batman")){
     fortuneFiveTotal++  
+  }
+  if(dataLast.includes("rich")){
+    fortuneSixTotal++  
+  }
+  if(dataLast.includes("head")){
+    fortuneSevenTotal++  
+  }
+  if(dataLast.includes("tree")){
+    fortuneEightTotal++  
+  }
+  if(dataLast.includes("EXPLODE")){
+    fortuneNineTotal++  
+  }
+  if(dataLast.includes("around")){
+    fortuneTenTotal++  
+  }
+  if(dataLast.includes("cool")){
+    fortuneElevenTotal++  
+  }
+  if(dataLast.includes("life")){
+    fortuneTwelveTotal++  
+  }
+  if(dataLast.includes("happy")){
+    fortuneThirteenTotal++  
+  }
+  if(dataLast.includes("hours")){
+    fortuneFourteenTotal++  
   }
   //calculates percent below and creates a phrase
   //percent for fortune one
@@ -118,6 +154,42 @@ function stats(){
   //percent for fortune five
   var percentFive = ((fortuneFiveTotal / totalFortunes) * 100);
   var phraseFive = "% of the fortunes generated say you will " + fortunesList[4] + ".";
+
+  //percent for fortune six
+  var percentSix = ((fortuneSixTotal / totalFortunes) * 100);
+  var phraseSix = "% of the fortunes generated say you will " + fortunesList[5] + ".";
+
+  //percent for fortune seven
+  var percentSeven = ((fortuneSevenTotal / totalFortunes) * 100);
+  var phraseSeven = "% of the fortunes generated say you will " + fortunesList[6] + ".";
+
+  //percent for fortune eight
+  var percentEight = ((fortuneEightTotal / totalFortunes) * 100);
+  var phraseEight = "% of the fortunes generated say you will " + fortunesList[7] + ".";
+
+  //percent for fortune nine
+  var percentNine = ((fortuneNineTotal / totalFortunes) * 100);
+  var phraseNine = "% of the fortunes generated say you will " + fortunesList[8] + ".";
+
+  //percent for fortune ten
+  var percentTen = ((fortuneTenTotal / totalFortunes) * 100);
+  var phraseTen = "% of the fortunes generated say you will " + fortunesList[9] + ".";
+
+  //percent for fortune eleven
+  var percentEleven = ((fortuneElevenTotal / totalFortunes) * 100);
+  var phraseEleven = "% of the fortunes generated say you will " + fortunesList[10] + ".";
+
+  //percent for fortune twelve
+  var percentTwelve = ((fortuneTwelveTotal / totalFortunes) * 100);
+  var phraseTwelve = "% of the fortunes generated say you will " + fortunesList[11] + ".";
+
+  //percent for fortune thirteen
+  var percentThirteen = ((fortuneThirteenTotal / totalFortunes) * 100);
+  var phraseThirteen = "% of the fortunes generated say you will " + fortunesList[12] + ".";
+
+  //percent for fortune fourteen
+  var percentFourteen = ((fortuneFourteenTotal / totalFortunes) * 100);
+  var phraseFourteen = "% of the fortunes generated say you will " + fortunesList[13] + ".";
 
   //this below prevents fortune percents from showing if not generated yet
   //if the fortune HAS been generated, it displays its percent in a phrase
@@ -156,6 +228,69 @@ function stats(){
   if(fortuneFiveTotal > 0){
     document.getElementById("five").innerText = Math.round(percentFive) + phraseFive;
   }
+  //fortune six
+  if(fortuneSixTotal == 0){
+    document.getElementById("six").innerText = " ";
+  }
+  if(fortuneSixTotal > 0){
+    document.getElementById("six").innerText = Math.round(percentSix) + phraseSix;
+  }
+  //fortune seven
+  if(fortuneSevenTotal == 0){
+    document.getElementById("seven").innerText = " ";
+  }
+  if(fortuneSevenTotal > 0){
+    document.getElementById("seven").innerText = Math.round(percentSeven) + phraseSeven;
+  }
+  //fortune eight
+  if(fortuneEightTotal == 0){
+    document.getElementById("eight").innerText = " ";
+  }
+  if(fortuneEightTotal > 0){
+    document.getElementById("eight").innerText = Math.round(percentEight) + phraseEight;
+  }
+  //fortune nine
+  if(fortuneNineTotal == 0){
+    document.getElementById("nine").innerText = " ";
+  }
+  if(fortuneNineTotal > 0){
+    document.getElementById("nine").innerText = Math.round(percentNine) + phraseNine; 
+  }
+  //fortune ten
+  if(fortuneTenTotal == 0){
+    document.getElementById("ten").innerText = " ";
+  }
+  if(fortuneTenTotal > 0){
+    document.getElementById("ten").innerText = Math.round(percentTen) + phraseTen;
+  }
+  //fortune eleven
+  if(fortuneElevenTotal == 0){
+    document.getElementById("eleven").innerText = " ";
+  }
+  if(fortuneElevenTotal > 0){
+    document.getElementById("eleven").innerText = Math.round(percentEleven) + phraseEleven;
+  }
+  //fortune twelve
+  if(fortuneTwelveTotal == 0){
+    document.getElementById("twelve").innerText = " ";
+  }
+  if(fortuneTwelveTotal > 0){
+    document.getElementById("twelve").innerText = Math.round(percentTwelve) + phraseTwelve;
+  }
+  //fortune thirteen
+  if(fortuneThirteenTotal == 0){
+    document.getElementById("thirteen").innerText = " ";
+  }
+  if(fortuneThirteenTotal > 0){
+    document.getElementById("thirteen").innerText = Math.round(percentThirteen) + phraseThirteen;
+  }
+  //fortune fourteen
+  if(fortuneFourteenTotal == 0){
+    document.getElementById("fourteen").innerText = " ";
+  }
+  if(fortuneFourteenTotal > 0){
+    document.getElementById("fourteen").innerText = Math.round(percentFourteen) + phraseFourteen; 
+  }
 }
 
 //Pie Chart (not my code)
@@ -164,9 +299,9 @@ function pieChart(){
   var canvas = document.getElementById("pie");
   var context = canvas.getContext("2d");
   var lastend = 0;
-  var data = [fortuneOneTotal, fortuneTwoTotal, fortuneThreeTotal, fortuneFourTotal, fortuneFiveTotal];
+  var data = [fortuneOneTotal, fortuneTwoTotal, fortuneThreeTotal, fortuneFourTotal, fortuneFiveTotal, fortuneSixTotal, fortuneSevenTotal, fortuneEightTotal, fortuneNineTotal, fortuneTenTotal, fortuneElevenTotal, fortuneTwelveTotal, fortuneThirteenTotal, fortuneFourteenTotal];
   var total = 0;
-  var color = ['aquamarine', 'palegreen', 'paleturquoise', 'red', 'peru'];
+  var color = ['aquamarine', 'palegreen', 'paleturquoise', 'red', 'peru', 'aqua', 'chartreuse', 'cyan', 'orange', 'orchid', 'gold', 'olive', 'seagreen', 'springgreen', 'royalblue', 'darkgray', 'deeppink', 'lime'];
 
   for(var z = 0; z < data.length; z++){
     total += data[z];
@@ -179,7 +314,7 @@ function pieChart(){
     context.arc(canvas.width/2,canvas.height/2,canvas.height/2,lastend,lastend+(Math.PI*2*(data[y]/total)), false);
     context.lineTo(canvas.width/2,canvas.height/2);
     context.stroke();
-    context.strokeStyle = "white";
+    context.strokeStyle = "coral";
     context.lineWidth = 5;
     context.fill();
     lastend += Math.PI*2*(data[y]/total);
