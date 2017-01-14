@@ -86,16 +86,16 @@ body{
 }
 
 #statistics{
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 600px;
   padding: 10px 10px;
   padding-bottom: 20px;
-  text-align: center;
   background-color: coral;
   border: chocolate 10px ridge;
+  text-align: center;
   font-family: "Courier New";
 }
 
@@ -110,8 +110,8 @@ body{
 }
 
 #pie{
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   margin-top: 20px;
   display: block;
 }

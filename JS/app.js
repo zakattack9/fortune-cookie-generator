@@ -301,7 +301,7 @@ function pieChart(){
   var lastend = 0;
   var data = [fortuneOneTotal, fortuneTwoTotal, fortuneThreeTotal, fortuneFourTotal, fortuneFiveTotal, fortuneSixTotal, fortuneSevenTotal, fortuneEightTotal, fortuneNineTotal, fortuneTenTotal, fortuneElevenTotal, fortuneTwelveTotal, fortuneThirteenTotal, fortuneFourteenTotal];
   var total = 0;
-  var color = ['aquamarine', 'palegreen', 'paleturquoise', 'red', 'peru', 'aqua', 'chartreuse', 'cyan', 'orange', 'orchid', 'gold', 'olive', 'seagreen', 'springgreen', 'royalblue', 'darkgray', 'deeppink', 'lime'];
+  var color = ['aquamarine', 'palegreen', 'darkblue', 'red', 'peru', 'aqua', 'chartreuse', 'deeppink', 'orange', 'orchid', 'gold', 'olive', 'seagreen', 'springgreen'];
 
   for(var z = 0; z < data.length; z++){
     total += data[z];
@@ -314,7 +314,7 @@ function pieChart(){
     context.arc(canvas.width/2,canvas.height/2,canvas.height/2,lastend,lastend+(Math.PI*2*(data[y]/total)), false);
     context.lineTo(canvas.width/2,canvas.height/2);
     context.stroke();
-    context.strokeStyle = "coral";
+    context.strokeStyle = "white";
     context.lineWidth = 5;
     context.fill();
     lastend += Math.PI*2*(data[y]/total);
@@ -356,7 +356,7 @@ Stuff to be Added:
 
 add a scrollbar once the "Previous Fortunes" list gets to long
 add a way to generate for multiple people
-add other statisics (ex. percentage of same fortunes recieved)
+add other statistics (ex. percentage of same fortunes recieved)
 make the page appear with a wave of the mouse over a "Crystal Ball"
 ---------------------------
 Side Notes:
